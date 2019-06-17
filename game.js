@@ -1,15 +1,12 @@
 let health = 100
-let name = "Target"
+let name = "Beat the Monster!"
 let hits = 0
 let surprise = 0
 
 function slap() {
     health--
     hits++
-    if (surprise >= 1) {
-        health--
-        surprise--
-    }
+    checkSurprise(1)
     update()
 }
 
@@ -25,20 +22,14 @@ function update() {
 function punch() {
     health -= 5
     hits++
-    if (surprise >= 1) {
-        health -= 5
-        surprise--
-    }
+    checkSurprise(5)
     update()
 }
 
 function kick() {
     health -= 10
     hits++
-    if (surprise >= 1) {
-        health -= 10
-        surprise--
-    }
+    checkSurprise(10)
     update()
 }
 
@@ -57,6 +48,13 @@ function shot() {
     health--
     surprise++
     update()
+}
+
+function checkSurprise(num) {
+   if (surprise >= 1) {
+        health -= num
+        surprise--
+    } 
 }
 
 update()

@@ -6,31 +6,35 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Slap Game</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Creepster&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="game.css">
 </head>
 <body>
-    <header>
-        <span>Health:<span id="health">--</span></span>
-        <br />
-        <span>Hits:<span id="hits">--</span></span>
-        <br />
-        <span id="name">[Placeholder]</span>
-    </header>
-    <img src="https://wcs.smartdraw.com/target-diagrams/examples/target-diagram-circle-thumb.png?bn=1510011144" alt="placeholder target">
-    <section>
-        <h3>Attacks</h3>
-        <button class="btn btn-dark" onClick="slap()">Slap</button>
-        <button class="btn btn-dark" onClick="punch()">Punch</button>
-        <button class="btn btn-dark" onClick="kick()">Kick</button>
-    </section>
-    <section>
-        <h3>Special</h3>
-        <button class="btn btn-dark" onClick="heal()">Heal</button>
-        <button class="btn btn-dark" onClick="reset()">Reset</button>
-        <button class="btn btn-dark" onClick="shot()">Cheap Shot</button>
-        <p>Heal restores target health by 20, Reset restarts the game, Cheap Shot reduces the enemy health without counting as a hit and doubles the damage of the next normal attack</p>
-    </section>
-    <p>The game will automatically reset when the enemy reaches 0 health</p>
-    <script src="game.js"></script>
+    <div class="container text-center">
+        <header>
+            <h1><span id="name">[Placeholder]</span></h1>
+            <span>Health:<span id="health">--</span></span>
+            <br />
+            <span>Hits:<span id="hits">--</span></span>
+
+
+        </header>
+        <img src="https://cdn-images-1.medium.com/max/2600/1*fmmF9LymBuB7uKXVYlshHQ.jpeg" alt="Cthulhu" width="200">
+        <section>
+            <h3>Attacks</h3>
+            <button class="btn btn-dark" onClick="slap()">Slap</button>
+            <button class="btn btn-dark" onClick="punch()">Punch</button>
+            <button class="btn btn-dark" onClick="kick()">Kick</button>
+        </section>
+        <section>
+            <h3>Special</h3>
+            <button class="btn btn-dark" onClick="heal()">Heal</button>
+            <button class="btn btn-dark" onClick="reset()">Reset</button>
+            <button class="btn btn-dark" onClick="shot()">Cheap Shot!</button>
+            <p>Heal restores target health by 20, Reset restarts the game, Cheap Shot reduces the enemy health without counting as a hit and doubles the damage of the next normal attack</p>
+        </section>
+        <p>The game will automatically reset when the enemy reaches 0 health</p>
+        <script src="game.js"></script>
+    </div>
 </body>
 </html>
